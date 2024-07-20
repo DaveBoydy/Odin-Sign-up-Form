@@ -1,0 +1,69 @@
+:root {
+  --large: 28px;
+  --extra-large: 56px;
+  --intro-weight: 600;
+
+  --left-side: 35vw;
+  --right-side: 65vw;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.form-content,
+.bg-img-left,
+.logo,
+.form-right {
+  display: flex;
+}
+
+.form-content {
+  height: 100vh;
+}
+
+.bg-img-left {
+  width: var(--left-side);
+  background: url(starry-sky.jpg) no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 24px;
+  position: relative;
+}
+
+.logo {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 25vh;
+}
+
+.logo h1 {
+  font-size: var(--extra-large);
+  color: #fff;
+}
+
+.credit-author,
+.credit-author a {
+  color: #fff;
+}
+
+.form-right {
+  width: var(--right-side);
+  padding: 0 clamp(1rem, 5vw, 3rem);
+  align-items: center;
+}
+
+.form-intro p {
+  font-size: var(--large);
+  font-weight: var(--intro-weight);
+  width: 60%;
+}
