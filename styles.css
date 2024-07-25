@@ -1,7 +1,7 @@
 :root {
-  --large: 28px;
+  --large: 24px;
   --extra-large: 56px;
-  --intro-weight: 600;
+  --intro-weight: 550;
 
   --left-side: 35vw;
   --right-side: 65vw;
@@ -15,15 +15,18 @@
   margin: 0;
 }
 
-.form-content,
-.bg-img-left,
-.logo,
-.form-right {
-  display: flex;
+:is(h1, h2, h3, p):not(.credit-author) {
+  max-inline-size: 58ch;
 }
 
-.form-content {
+.body-container {
   height: 100vh;
+}
+
+.body-container,
+.bg-img-left,
+.form-right {
+  display: flex;
 }
 
 .bg-img-left {
@@ -32,23 +35,23 @@
   background-size: cover;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 24px;
+  padding-bottom: 16px;
   position: relative;
 }
 
 .logo {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 15%;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 25vh;
-}
-
-.logo h1 {
   font-size: var(--extra-large);
   color: #fff;
+  position: absolute;
+  top: 30vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 3.3vh 0;
+  text-align: center;
+}
+
+.credit-author {
+  text-align: center;
 }
 
 .credit-author,
@@ -58,12 +61,53 @@
 
 .form-right {
   width: var(--right-side);
-  padding: 0 clamp(1rem, 5vw, 3rem);
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.form-intro p {
+.form-right > *:not(form),
+.submit-form {
+  padding: 0 clamp(1rem, 5vw, 3rem);
+}
+
+.form-intro p,
+.cta {
   font-size: var(--large);
   font-weight: var(--intro-weight);
-  width: 60%;
+}
+
+.form-intro > .cta {
+  margin-top: 24px;
+}
+
+.form-card {
+  margin-top: 32px;
+  box-shadow: 2px 5px 10px -1px rgba(0, 0, 0, 0.3);
+  padding: 24px clamp(1rem, 5vw, 3rem);
+}
+
+.form-section {
+  display: flex;
+  gap: 48px;
+  margin-top: 16px;
+}
+
+.form-card label {
+  display: block;
+}
+
+.form-card input {
+  width: 17vw;
+  width: 20em;
+  height: 30px;
+}
+
+.submit-form {
+  margin-top: 32px;
+}
+
+.submit-form > button {
+  padding: 0.7em 4em;
+  border-radius: 5px;
 }
