@@ -5,8 +5,8 @@
   --family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-  --left-side: 35vw;
-  --right-side: 65vw;
+  --left-side: 40vw;
+  --right-side: 60vw;
 
   --primary: #f9fafb;
   --secondary: #fff;
@@ -31,7 +31,7 @@
 }
 
 :is(h1, h2, h3, p):not(.credit-author) {
-  max-inline-size: 58ch;
+  max-inline-size: 50ch;
 }
 
 .body-container {
@@ -58,7 +58,7 @@
 
 .logo {
   position: absolute;
-  top: 28.5vh;
+  top: 29vh;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   justify-content: center;
@@ -116,7 +116,8 @@
   background-color: #fff;
   margin-top: 32px;
   box-shadow: var(--card-shadow);
-  padding: 32px clamp(1rem, 5vw, 3rem);
+  padding: 24px clamp(1rem, 5vw, 3rem);
+  padding-bottom: 36px;
 }
 
 .form-section {
