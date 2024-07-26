@@ -13,6 +13,7 @@
   --accent: #544a53;
   --neutral: #e0e0e0;
   --contrast: #404040;
+  --invalid: red;
 
   --card-shadow: 2px 5px 10px -3px rgba(0, 0, 0, 0.3);
 }
@@ -137,6 +138,7 @@
   height: 30px;
   border-radius: 4px;
   border: solid 1px var(--neutral);
+  padding: 3px;
 }
 
 .submit-form {
@@ -164,4 +166,12 @@
 
 .acc-login:hover {
   text-decoration: underline;
+}
+
+.form-section input:invalid {
+  border: solid 1px var(--invalid);
+}
+
+.form-section input:placeholder-shown {
+  border: solid 1px var(--neutral);
 }
